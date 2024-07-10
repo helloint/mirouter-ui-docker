@@ -1,0 +1,11 @@
+# docker run -d -p 6789:6789 -v $(pwd):/app/data --name mirouter-ui --restart=always thun888/mirouter-ui
+version: "3.1"
+services:
+  mirouter:
+    image: thun888/mirouter-ui
+    container_name: mirouter-ui
+    volumes:
+     - .:/app/data
+    ports:
+     - "6789:6789"
+    restart: always
